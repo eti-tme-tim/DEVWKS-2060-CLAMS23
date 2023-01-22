@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "title": "Overview",
+      "content": "00-overview.md"
+    },
+    {
+      "title": "Introduction",
+      "content": "01-intro.md"
+    },
+    {
+      "title": "Authentication",
+      "content": "02-authentication.md"
+    },
+    {
+      "title": "Standalone Server Profile",
+      "content": "03-standalone.md"
+    },
+    {
+      "title": "Intersight Managed Server Profile",
+      "content": "04-intersight.md"
+    },
+    {
+      "title": "Server Profiles at Scale",
+      "content": "05-scaling.md"
+    },
+    {
+      "title": "Review",
+      "content": "06-summary.md"
+    }
+  ],
+  "config": {
+    "devEnv": {
+      "id": "devenv-tf-ansible",
+      "default_content": "src/"
+    },
+    "video": {},
+    "sandbox": {}
+  },
+  "meta": {
+    "slug": "",
+    "time": "90",
+    "tags": [
+      {
+        "title": "Terraform"
+      },
+      {
+        "title": "Intersight"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Tim Miller",
+        "email": "timmil@cisco.com"
+      }
+    ]
+  }
+}
