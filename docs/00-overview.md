@@ -29,7 +29,7 @@ Direct navigation to each section is not necessary as the learning lab platform 
 The following technologies and initial setup is required prior to engaging this workshop.
 
 - [Git](https://git-scm.com)
-- [Terraform 1.3.7](https://www.terraform.io/downloads)
+- [Terraform 1.1.9](https://www.terraform.io/downloads)
 - [Terraform Provider 1.0.35](https://registry.terraform.io/providers/CiscoDevNet/intersight/latest)
 - [Cisco Intersight Account](https://intersight.com)
     - For lab purposes, Cisco Intersight trial license will suffice
