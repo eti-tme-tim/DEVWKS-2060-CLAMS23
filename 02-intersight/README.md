@@ -1,29 +1,34 @@
-# Instructions for Building Lab Infrastructure
+# Creating 3 Intersight Policies
 
-## Intersight API Credentials
+In this directory, students of the workshop will leverage Intersight API docs and Terraform provider docs to build three distinct UCS Server policies within the platform using Terraform:
 
-Option 1 (for local development):
-- Use script to set the appropriate TF environment variables to point
-to the API credentials. You'll have to define the SECURE environment
-variable to indicate the directory on disk the files are stored.
-    - DEVWKS-2060-Default-KeyID.txt: API Key ID string
-    - DEVWKS-2060-Default-Secret.txt: PEM encoded API Secret Key
+- [IPKVM policy](https://registry.terraform.io/providers/CiscoDevNet/intersight/latest/docs/resources/kvm_policy)
+- [IPMI policy](https://registry.terraform.io/providers/CiscoDevNet/intersight/latest/docs/resources/ipmioverlan_policy)
+- [Serial over LAN policy](https://registry.terraform.io/providers/CiscoDevNet/intersight/latest/docs/resources/sol_policy)
 
-Option 2 (for Enterprise solutions):
-- Define environment variables securely
+In summary, the goal of the challenge is to:
+
+- Enable IPKVM, with a maximum of 4 sessions, unencrypted, on the standard port 2069. The local server video should be enabled as well.
+- Disable IPMI over LAN
+- Disable Serial over LAN
+
+Solutions are found in the [solutions](./solutions/) directory.
+
+## Requirements
+
+- Define environment variables securely to authenticate with Intersight
     - TF_VARS_apikey with the string of the API Key ID
-    - TF_VAR_secretkeyfile with the full path filename to the Secret Key file.
+    - TF_VAR_secretkey with the full path filename to the Secret Key file.
 
-Note: Option 2 may require Terraform HCL changes to leverage the
-**secretkey** approach to specify the whole contents of the Secret Key file
-as opposed to the file name.
+- Define environment variable to identify your workshop organization
+    - TF_VAR_target_organization, with the name given at your workstation (e.g. studentX)
 
-## Terraform Operations
-
-You'll need to define one last environment variable to specify the organization to be referenced for this test. Below the example specifies the "studentX" organization. This organization **must already exist* within Intersight or this test will not succeed.
+An example set of commands to set up those pre-requisites would be:
 
 ```bash
-export TF_VAR_target_organization=studentX
+export TF_VARS_apikey=abc8939278ca0d0e8gf67365581ba3
+export TF_VARS_secretkey=$HOME/intersight.private.key.txt
+export TF_VAR_target_organization=student42
 ```
 
 Once the correct organization is specified, test your Terraform credentials via the usual Terraform workflow.
