@@ -8,6 +8,9 @@ resource "intersight_ipmioverlan_policy" "ipmi_disabled" {
   description = "IPMI over LAN disabled - Terraform deployed"
   name        = "IPMI-Disabled"
 
+  # COMMENT OUT OR DELETE THE FOLLOWING LINE WHEN YOU ARE READY TO CONFIGURE THIS RESOURCE
+  count = 0
+
   # ADD THE KEY/VALUE PAIRS BELOW
 
 }

@@ -8,5 +8,9 @@ resource "intersight_kvm_policy" "kvm_enabled_insecure" {
   description               = "Terraform deployed"
   name                      = "KVMenabledInsecure"
 
+  # COMMENT OUT OR DELETE THE FOLLOWING LINE WHEN YOU ARE READY TO CONFIGURE THIS RESOURCE
+  count = 0
+
   # ADD THE KEY/VALUE PAIRS BELOW
+
 }

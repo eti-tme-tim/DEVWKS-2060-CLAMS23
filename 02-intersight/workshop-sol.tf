@@ -8,5 +8,9 @@ resource "intersight_sol_policy" "sol_disabled" {
   description = "Terraform deployed"
   name        = "SOL-Disabled"
 
+  # COMMENT OUT OR DELETE THE FOLLOWING LINE WHEN YOU ARE READY TO CONFIGURE THIS RESOURCE
+  count = 0
+
   # ADD THE KEY/VALUE PAIRS BELOW
+
 }
