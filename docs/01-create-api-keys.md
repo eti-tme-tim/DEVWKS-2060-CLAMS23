@@ -4,7 +4,7 @@ Before we begin, we need to download all the code related to this workshop from 
 
 ```bash
 cd /home/developer/src
-git clone https://github.com/CiscoSE/DEVWKS-2060-CLAMS23
+git clone https://github.com/eti-tme-tim/DEVWKS-2060-CLAMS23
 cd DEVWKS-2060-CLAMS23
 ```
 
